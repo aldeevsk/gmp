@@ -105,5 +105,4 @@ import { tns } from "./tns.js";
     }
     setupModal({modalSel: '[data-role="modal"]', onSel: '[data-action="show-modal"]', offSel: '[data-action="hide-modal"]', activeClass: 'active'})
 
-
 })()

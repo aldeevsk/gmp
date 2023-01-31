@@ -57,17 +57,15 @@ body {
 main {
     flex-grow: 1;
 }
-section {
-    padding: 20px 0;
+.section {
+    width: 100%;
+    padding: var(--section-padding);
 }
 .section__title {
     font-size: var(--font-l);
 }
 .hidden {
     display: none;
-}
-[class*="section"] {
-    width: 100%;
 }
 [class*="container"] {
     width: min(1180px, calc(100% - 40px));
@@ -116,15 +114,19 @@ section {
     border-color: var(--accent);
     color: var(--accent);
 }
+[class*="--btn-white"]:active {
+    background: transparent;
+    border-color: var(--accent-o);
+    color: var(--accent-o);
+}
 [class*="--btn-accent"] {
     background: transparent;
     border-color: var(--accent);
     color: var(--accent);
 }
 [class*="--btn-accent"]:hover {
-    background: transparent;
-    border-color: var(--accent-lighten);
-    color: var(--accent-lighten);
+    background: var(--accent);
+    color: var(--white);
 }
 [class*="--btn-accent"]:active {
     background: transparent;
@@ -236,7 +238,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
-    padding: 20px 0;
+    padding-top: 40px;
 }
 .card {
     display: block;
@@ -258,11 +260,11 @@ section {
 .card__description {
     max-height: 0;
     overflow: hidden;
-    transition: var(--transition);
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -ms-transition: var(--transition);
-    -o-transition: var(--transition);
+    transition: max-height var(--speed) ease;
+    -webkit-transition: max-height var(--speed) ease;
+    -moz-transition: max-height var(--speed) ease;
+    -ms-transition: max-height var(--speed) ease;
+    -o-transition: max-height var(--speed) ease;
 }
 .card__link {
     display: block;
@@ -273,6 +275,9 @@ section {
 }
 .slider__header {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 40px;
 }
 .slider__controls {
     display: flex;
@@ -310,11 +315,16 @@ section {
 }
 .badge__buttons {
     height: 100%;
-    display: flex;
+    display: grid;
     justify-content: start;
     align-items: flex-end;
 }
-
+.badge__buttons:hover {
+    height: 100%;
+}
+.badge__button {
+    align-self: end;
+}
 .modal {
     position: fixed;
     top: 0;
