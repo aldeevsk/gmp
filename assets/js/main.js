@@ -95,13 +95,13 @@ import { tns } from "./tns.js";
 
     function setupModal({modalSel = '[data-role="modal"]', onSel = '[data-action="show-modal"]', offSel = '[data-action="hide-modal"]', activeClass = 'active'}) {
       const modal = document.querySelector(modalSel)
-      const showButton = document.querySelector(onSel)
-      const hideButton = document.querySelector(offSel)
+      const showButtons = Array.from(document.querySelectorAll(onSel))
+      const hideButtons = Array.from(document.querySelectorAll(offSel))
 
-      if(!modal || !showButton || !hideButton) return
+      if(!modal || !showButtons || !hideButtons) return
 
-      showButton.addEventListener('click', () => modal.classList.add(activeClass))
-      hideButton.addEventListener('click', (event) => {if(event.target === hideButton) modal.classList.remove(activeClass)})
+      document.addEventListener('click', (event) => {if (showButtons.includes(event.target)) modal.classList.add(activeClass)})
+      document.addEventListener('click', (event) => {if(hideButtons.includes(event.target)) modal.classList.remove(activeClass)})
     }
     setupModal({modalSel: '[data-role="modal"]', onSel: '[data-action="show-modal"]', offSel: '[data-action="hide-modal"]', activeClass: 'active'})
 
