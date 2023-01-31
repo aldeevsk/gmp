@@ -1,0 +1,30 @@
+:root {
+    --primary: linear-gradient(276.68deg, rgba(0, 0, 0, 0.2) 7.77%, rgba(30, 30, 30, 0.176292) 18.64%, rgba(65, 65, 65, 0.148877) 31.21%, rgba(142, 142, 142, 0.0889052) 58.7%, rgba(191, 191, 191, 0.0499819) 76.54%, rgba(255, 255, 255, 0.0406428) 80.82%, rgba(212, 212, 212, 0.0334335) 84.13%, rgba(255, 255, 255, 0) 99.46%), #201B1B;
+    --primary-o: rgba(32, 27, 27, 0.5);
+    --accent: #B20A09;
+    --accent-darken: #a00909;
+    --accent-lighten: #cc1414;
+    --accent-o: rgba(178, 9, 9, 0.5);
+    --sedcondary: #F9F9F9;
+    --black: #000;
+    --black-o: rgba(0, 0, 0, 0.5);
+    --grey: #F9F9F9;;
+    --white: #fff;
+    --white-o: rgba(255, 255, 255, 0.5);
+    --header-h: 60px;
+    --attention: red;
+    --light: linear-gradient(276.68deg, rgba(0, 0, 0, 0.2) 25.3%, rgba(30, 30, 30, 0.176292) 37.14%, rgba(65, 65, 65, 0.148877) 48.95%, rgba(142, 142, 142, 0.0889052) 68.34%, rgba(191, 191, 191, 0.0499819) 76.54%, rgba(255, 255, 255, 0.0406428) 80.82%, rgba(212, 212, 212, 0.0334335) 92.87%, rgba(255, 255, 255, 0) 99.46%), #FFFFFF;
+    
+    --shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    --h-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    --radius: 5px;
+    --speed: 0.3s;
+    --transition: all 0.3s ease;
+
+    --font-xxl: 64px;
+    --font-xl: 36px;
+    --font-l: 30px;
+    --font-m: 16px;
+    --font-r: 14px;
+}

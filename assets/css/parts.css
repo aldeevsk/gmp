@@ -1,0 +1,207 @@
+.header__top {
+    background: var(--black);
+    color: var(--white);
+    height: 25px;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+}
+.header__contact, .header__user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header__contact {
+    font-weight: 700;
+}
+.header__user {
+    font-weight: 600;
+}
+.header__link, .header__field {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border: none;
+}
+.header__field {
+    cursor: default;
+}
+.header__link:hover, .header__field:hover {
+    color: var(--accent);
+}
+.logo {
+    width: 216px;
+}
+.header__main {
+    background: var(--white);
+    padding: 6px 0;
+}
+.nav__contact, .nav__user {
+    display: none;
+}
+.nav__link {
+    font-weight: 500;
+    font-size: 14px;
+}
+.nav__showbutton, .nav__hidebutton {
+    position: relative;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    display: none;
+}
+.nav__showbutton:hover,
+.nav__showbutton:active,
+.nav__hidebutton:hover,
+.nav__hidebutton:active {
+    background: transparent;
+    border-color: transparent;
+}
+.nav__showbutton::before {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    top: 7px;
+}
+.nav__showbutton::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    bottom: 7px;
+}
+.nav__hidebutton::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.nav__hidebutton::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+.promo {
+    --height: 670px;
+    position: relative;
+    padding: 0;
+    height: var(--height);
+}
+.promo__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.slide {
+    width: 100%;
+    height: var(--height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+.slide__col {
+    text-align: center;
+    gap: 10px;
+    width: min(700px, 100%);
+    width: fit-content;
+    position: absolute;
+    right: 0;
+}
+.slide:nth-child(2n) .slide__col {
+    left: 0;
+}
+.slide__title {
+    font-size: var(--font-xl);
+    font-weight: 800;
+}
+.slide__subtitle {
+    font-weight: 800;
+    font-size: var(--font-l);
+}
+.slider__nav {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+.slider__nav-item {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 5px;
+    background: var(--white);
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+.slider__nav-item[class*="active"] {
+    background: var(--black-o);
+    cursor: default;
+}
+.slider .prev, .slider .next {
+    padding: 2px;
+    background: transparent;
+    border-color: transparent;
+}
+.slider .prev:hover, .slider .next:hover {
+    border-color: var(--accent);
+}
+
+.footer {
+    background: var(--black);
+    color: var(--white);
+    font-weight: 700;
+}
+.footer__col {
+    display: flex;
+    gap: 5px;
+}
+.footer__col-title {
+    font-size: var(--font-m);
+}
