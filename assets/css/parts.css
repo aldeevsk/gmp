@@ -318,6 +318,11 @@
     box-shadow: var(--p-shadow);
     padding: 30px;
     margin-top: var(--t-padding);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .partners {
     display: flex;
