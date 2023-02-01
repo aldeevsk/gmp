@@ -7,6 +7,8 @@
         --font-xxl: 40px;
         --font-xl: 25px;
         --font-l: 18px;
+        --font-sl: 18px;
+        --font-xm: 14px;
         --font-r: 12px;
         --header-h: 62px;
     }
@@ -80,6 +82,56 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+    .filter {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        border: none;
+    }
+    .filter__input {
+        height: 30px;
+        width: 50%;
+        border-radius: unset !important;
+        border: none;
+        -webkit-border-radius: unset !important;
+        -moz-border-radius: unset !important;
+        -ms-border-radius: unset !important;
+        -o-border-radius: unset !important;
+    }
+    .filter__input:nth-child(1) {
+        border-left: 2px solid var(--accent);
+        border-top: 2px solid var(--accent);
+        border-right: 2px solid var(--black-o);
+        border-bottom: 2px solid var(--black-o);
+        border-top-left-radius: 4px;
+    }
+    .filter__input:nth-child(2) {
+        border-right: 2px solid var(--accent);
+        border-top: 2px solid var(--accent);
+        border-bottom: 2px solid var(--black-o);
+    }
+    .filter__input:nth-child(3) {
+        border-left: 2px solid var(--accent);
+        border-bottom: 2px solid var(--accent);
+    }
+    .filter__input:nth-child(4) {
+        border-right: 2px solid var(--accent);
+        border-bottom: 2px solid var(--accent);
+        border-bottom-right-radius: var(--radius);
+    }
+    .filter__button {
+        height: 30px;
+        width: 100%;
+        border-radius: var(--radius);
+        -webkit-border-radius: var(--radius);
+        -moz-border-radius: var(--radius);
+        -ms-border-radius: var(--radius);
+        -o-border-radius: var(--radius);
+        margin-top: 3px;
+}
+    .card {
+        max-width: unset;
+    }
 }
 @media screen and (max-width: 768px) {
     .badge {
@@ -95,6 +147,19 @@
     .badge__subtitle {
         text-align: center;
     }
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .col-1_2 {
+        width: 100%;
+    }
+    .contact__map {
+        height: 300px;
+    }
+    .contact__list {
+        padding-top: 30px;
+    }
 }
 @media screen and (max-width: 576px) {
     .footer__grid {
@@ -104,5 +169,12 @@
     }
     .footer__col {
         align-items: center;
+    }
+    .contact__row .container {
+        grid-template-columns: unset;
+    }
+    .contact__list {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }

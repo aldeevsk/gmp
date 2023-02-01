@@ -17,6 +17,7 @@
     
     --shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     --h-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.15);
+    --p-shadow: 0px 0px 50px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(225, 225, 239, 0.5);
 
     --radius: 5px;
     --speed: 0.3s;
@@ -25,8 +26,12 @@
     --font-xxl: 64px;
     --font-xl: 36px;
     --font-l: 30px;
+    --font-sl: 24px;
+    --font-xm: 20px;
     --font-m: 16px;
     --font-r: 14px;
+    --font-sm: 10px;
 
     --section-padding: 40px 0;
+    --t-padding: 40px;
 }

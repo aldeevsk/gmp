@@ -105,4 +105,16 @@ import { tns } from "./tns.js";
     }
     setupModal({modalSel: '[data-role="modal"]', onSel: '[data-action="show-modal"]', offSel: '[data-action="hide-modal"]', activeClass: 'active'})
 
+    
+    function phoneHider(phoneSel = '.phone__number', buttonSel = '.phone__button', visibleDigits = 3) {
+      const phone = document.querySelector(phoneSel)
+      const button = document.querySelector(buttonSel)
+
+      if(!phone || !button) return console.log('[phoneHider()]: phone or button undefined...')
+
+      const number = phone.dataset.tel
+      button.addEventListener('click', () => phone.textContent = number)
+    }
+    phoneHider()
+
 })()
